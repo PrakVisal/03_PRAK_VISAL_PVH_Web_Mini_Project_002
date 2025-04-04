@@ -13,8 +13,8 @@ export const loginAction = async (formData) => {
     redirect: false,
   });
   if (session?.payload?.token) {
-    redirect("/todo");
+    return redirect("/todo");
   } else {
-    return "error";
+    return redirect("/login");
   }
 };

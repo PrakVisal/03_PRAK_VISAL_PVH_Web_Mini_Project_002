@@ -83,6 +83,13 @@ const ShowModal = ({ workspaceId, onClose }) => {
               <option value="">Choose a tag</option>
               <option value="DESIGN">DESIGN</option>
               <option value="DATABASE">DATABASE</option>
+              <option value="HOMEWORK">HOMEWORK</option>
+              <option value="ASSIGNMENT">ASSIGNMENT</option>
+              <option value="DEPLOYMENT">DEPLOYMENT</option>
+              <option value="GIT">GIT</option>
+              <option value="MINI_PROJECT">MINI PROJECT</option>
+              <option value="DOCUMENTATION">DOCUMENTATION</option>
+              <option value="FEATURE">FEATURE</option>
             </select>
             {state?.tag && (
               <p className="text-red-500 text-xs mt-1">{state?.tag}</p>

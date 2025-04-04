@@ -21,6 +21,11 @@ export default async function MySideBar() {
     8: "cyan",
     9: "emerald",
   };
+  const colors = [
+  "bg-red-500", "bg-blue-500", "bg-green-500", 
+  "bg-yellow-500", "bg-purple-500", "bg-pink-500"
+];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
   console.log("Mydata:", workspaces);
   console.log("random:", Math.random() * 10);
 
@@ -45,9 +50,9 @@ export default async function MySideBar() {
                 <li className="flex items-center justify-between p-2 hover:bg-white rounded cursor-pointer group">
                   <div className="flex items-center gap-2">
                     <div
-                      className={`w-2 h-2 rounded-full bg-${
-                        colorDot[Math.round(randomInt(9))]
-                      }-500`}
+                      className={`w-2 h-2 rounded-full ${
+                        randomColor
+                      }`}
                     ></div>
                     <span className="text-gray-700">
                       {workspace.workspaceName || "Untitled Workspace"}
